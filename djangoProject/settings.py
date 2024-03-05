@@ -22,11 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-%s^px_x8b!^l*4*l(5bseu7#r@k%hz@n5zw0fj!qbj5skax1=5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
@@ -155,5 +155,3 @@ STATIC_ROOT = os.path.join(BASE_DIR.joinpath('staticfiles'))
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SITE_ID = 1
-
-APPEND_SLASH = True
